@@ -50,7 +50,7 @@ const Home = () => {
                     </div>
                     <div className="profile-option flex justify-center my-5 gap-5">
                         <button className='rounded-full bg-green-700 md:text-2xl px-5 py-2 text-white font-bold w-36 md:w-48'>Hire Me</button>
-                        <a href="set.pdf" download='set.pdf'>
+                        <a href="Mustafizur Rahman-RESUME.pdf" download='Mustafizur Rahman-RESUME.pdf'>
                             <button className='rounded-full bg-green-700 md:text-2xl px-5 py-2 text-white font-bold md:w-48'>Get Resume</button>
                         </a>
                     </div>

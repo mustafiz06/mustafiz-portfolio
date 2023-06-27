@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
+import ContactNav from '../ContactNav/ContactNav';
 
 const Contact = () => {
 
@@ -21,9 +22,7 @@ const Contact = () => {
                 <h1 className='text-3xl font-extrabold font-mono'>Mustafiz</h1>
                 <p className='my-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem velit, voluptatibus labore quia ducimus fuga. Fuga iure id sunt debitis!</p>
                 <div className="links">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <ContactNav></ContactNav>
                 </div>
             </div>
             <div className="form-contact relative p-5">
