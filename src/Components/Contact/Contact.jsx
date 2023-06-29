@@ -2,42 +2,56 @@ import React from 'react';
 import './Contact.css';
 import emailjs from 'emailjs-com';
 import ContactNav from '../ContactNav/ContactNav';
+import { HiOutlinePhone, HiLocationMarker } from 'react-icons/hi';
+import { FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-    emailjs.sendForm('service_xtl7ddb', 'template_5jq7akk', e.target, 'kK1OkuCMhU7Znnmyy')
-      .then((result) => {
-          console.log(result.text);
-          alert('Message Send')
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
+        emailjs.sendForm('service_xtl7ddb', 'template_5jq7akk', e.target, 'kK1OkuCMhU7Znnmyy')
+            .then((result) => {
+                console.log(result.text);
+                alert(`Message Send. You Send:` + result.text);
+            }, (error) => {
+                alert(`Message can't send.Check Your Connection then Try again.`)
+            });
+    };
     return (
-        <div className='contact grid gap-10 mx-10 h-screen '>
-            <div className="social-contact text-white flex flex-col justify-end p-5 bg-gray-700">
-                <h1 className='text-3xl font-extrabold font-mono'>Mustafiz</h1>
-                <p className='my-5'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem velit, voluptatibus labore quia ducimus fuga. Fuga iure id sunt debitis!</p>
+        <div className='contact md:grid gap-10 mx-10 md:h-screen text-white'>
+            <div className="form-contact p-5">
+                <h1 className='text-2xl md:text-5xl text-center'>Get In Touch</h1>
+                <p className='text-center text-sm md:text-2xl'>24/7 I will answer your questions & problems.</p>
+                <form onSubmit={sendEmail} className='flex flex-col gap-3 mt-10'>
+                    <input type="text" required name='name' placeholder="Name" className='px-10 py-1 md:py-5 border-2  text-black' />
+                    <input type="email" required name='user-email' placeholder="Email" className='px-10 py-1 md:py-5 border-2 text-black' />
+                    <textarea name="message" required id="" className='px-10 py-2 md:py-10 border-2 text-black'
+                        placeholder="Your Message Here..."
+                    ></textarea>
+                    <span className='md:w-4/12 p-3 text-white text-xl md:text-2xl bg-aqua flex justify-center gap-2'>
+                        <input type='submit' value='Send Now!' />
+                        <FaPaperPlane />
+                    </span>
+                </form>
+            </div>
+
+
+            <div className="social-contact text-white flex flex-col justify-center p-5 md:bg-indigo-800">
+                <h1 className='text-base md:text-4xl font-extrabold font-mono text-center'>Mustafiz</h1>
+
+                <p className='flex items-center justify-center text-sm md:text-2xl'>
+                    <HiOutlinePhone className='mr-2' />
+                    <span>01787820606</span>
+                </p>
+                <p className='flex items-center justify-center text-sm md:text-2xl'>
+                    <HiLocationMarker className='mr-2' />
+                    <span>Jessore,Khulna,Bangladesh</span>
+                </p>
+                <p className='my-5 text-center text-xs md:text-base'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem velit, voluptatibus labore quia ducimus fuga. Fuga iure id sunt debitis!</p>
                 <div className="links">
                     <ContactNav></ContactNav>
                 </div>
-            </div>
-            <div className="form-contact relative p-5">
-                <h1 className='text-5xl'>Get In Touch</h1>
-                <p>24/7 I will answer your questions & problems.</p>
-                <form onSubmit={sendEmail} className='flex flex-col gap-3 mt-10'>
-                    <input type="text" name='name' placeholder="Name" className='px-10 py-5 border-2 border-black' />
-                    <input type="email" name='user-email' placeholder="Email" className='px-10 py-5 border-2 border-black' />
-                    <textarea name="message" id="" className='px-10 pt-3 h-36 border-2 border-black'
-                        placeholder="Your Message Here..."
-                    ></textarea>
-
-                    <input type='submit' value='Send Your message Now!' className='w-full p-3 text-white text-2xl absolute bottom-5 bg-green-700'/>
-
-                </form>
             </div>
         </div>
     );

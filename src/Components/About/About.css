@@ -2,10 +2,3 @@
     grid-template-columns: 30% 65%;
     height: 60vh;
 }
-.expert-on{
-    grid-template-columns: repeat(3,1fr);
-    margin-top: -80px;
-}
-.skill-container{
-    grid-template-columns: repeat(5,1fr);
-}
