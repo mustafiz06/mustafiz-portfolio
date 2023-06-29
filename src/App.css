@@ -8,3 +8,19 @@
     background-color: #3730A3;
 
 }
+.home-parent{
+    background-image: url(https://www.engineready.com/wp-content/uploads/2016/08/portfolio-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hover-shadow:hover{
+    box-shadow: 0 10px 20px -5px #6E57E0;
+}
+.project-image:hover{
+    transform: scale(1.1);
+    /* border:2px solid #3730A3; */
+}
+.contact{
+    grid-template-columns: 60% 35%;
+    
+}

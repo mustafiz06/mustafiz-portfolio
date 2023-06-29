@@ -1,5 +1,4 @@
 import React from 'react';
-import './Contact.css';
 import emailjs from 'emailjs-com';
 import ContactNav from '../ContactNav/ContactNav';
 import { HiOutlinePhone, HiLocationMarker } from 'react-icons/hi';
@@ -12,8 +11,7 @@ const Contact = () => {
 
         emailjs.sendForm('service_xtl7ddb', 'template_5jq7akk', e.target, 'kK1OkuCMhU7Znnmyy')
             .then((result) => {
-                console.log(result.text);
-                alert(`Message Send. You Send:` + result.text);
+                alert(`Message Send. You Send:`);
             }, (error) => {
                 alert(`Message can't send.Check Your Connection then Try again.`)
             });
@@ -29,10 +27,10 @@ const Contact = () => {
                     <textarea name="message" required id="" className='px-10 py-2 md:py-10 border-2 text-black'
                         placeholder="Your Message Here..."
                     ></textarea>
-                    <span className='md:w-4/12 p-3 text-white text-xl md:text-2xl bg-aqua flex justify-center gap-2'>
+                    <button className='md:w-4/12 p-3 text-white text-xl md:text-2xl bg-aqua flex justify-center gap-2'>
                         <input type='submit' value='Send Now!' />
                         <FaPaperPlane />
-                    </span>
+                    </button>
                 </form>
             </div>
 

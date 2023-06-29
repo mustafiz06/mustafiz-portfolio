@@ -22,7 +22,8 @@ const Skill = () => {
         <div className='mx-10 text-white flex flex-col '>
             <h1 className='text-xl sm:text-2xl md:text-3xl py-2 font-bold text-center'>My Skill</h1>
             <p className='text-sm sm:text-xl md:text-2xl md:mx-56 text-center'>A skill is a learned ability or expertise that enables individuals to proficiently perform specific tasks or activities in a particular domain.</p>
-            <div className="skill-container grid-cols-2 grid md:grid-cols-5 sm:grid-cols-3 gap-8 py-10">
+
+            <div className="grid-cols-2 grid md:grid-cols-5 sm:grid-cols-3 gap-8 py-10">
                 {
                     skillTopics.map(skillTopic => <SkillTopic key={skillTopic.id} skillTopic={skillTopic}></SkillTopic>)
                 }

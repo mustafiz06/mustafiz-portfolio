@@ -8,7 +8,7 @@ const About = () => {
 
             <div className='about-description md:grid gap-10'>
                 <div className='md:h-full bg-aqua rounded-md mb-5 p-2'>
-                    <img className='h-full rounded-md' src="https://d3kqdc25i4tl0t.cloudfront.net/articles/content/143_533728_160122gmailpic_hero.jpg" alt="" />
+                    <img className='h-full rounded-md' src="images/About.png" alt="" />
                 </div>
                 <div className='flex items-center bg-gray-700 text-white rounded-md border-s-8 border-s-indigo-800 p-5'>
                     <p className='text-justify text-sm sm:text-xl md:text-2xl'>

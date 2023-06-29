@@ -5,7 +5,7 @@ const ContactNavLink = ({contactNav}) => {
     return (
         <div>
             <a href={contactNav.url}>
-                <img className='h-10 rounded-full' target="_blank" src={contactNav.icon} alt="" />
+                <img className='h-5 md:h-10 rounded-full' target="_blank" src={contactNav.icon} alt="" />
             </a>
         </div>
     );
